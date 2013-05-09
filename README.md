@@ -16,13 +16,13 @@ Attributes
     <td><tt>['play2']['version']</tt></td>
     <td>String</td>
     <td>The framework version</td>
-    <td><tt>2.1.0</tt></td>
+    <td><tt>2.1.1</tt></td>
   </tr>
   <tr>
     <td><tt>['play2']['checksum']</tt></td>
     <td>String</td>
     <td>Zip checksum</td>
-    <td><tt>0eef88602d26409bb584536cedb585de</tt></td>
+    <td><tt>1ec0b736f9836f760b3c135154fd9a4b</tt></td>
   </tr>
   <tr>
     <td><tt>['play2']['url']</tt></td>
@@ -47,6 +47,23 @@ Just include `play2` in your node's `run_list`:
 ```json
 {
   "name":"my_node",
+  "run_list": [
+    "recipe[play2]"
+  ]
+}
+```
+### Install another version
+To install another version of play, override default attributes in your node
+
+```
+{
+  "name":"my_node",
+  override_attributes(
+    :play2 => {
+    	:version => "2.1.0",
+    	:checksum => "0eef88602d26409bb584536cedb585de"
+    }
+  )
   "run_list": [
     "recipe[play2]"
   ]
