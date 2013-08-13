@@ -16,13 +16,13 @@ Attributes
     <td><tt>['play2']['version']</tt></td>
     <td>String</td>
     <td>The framework version</td>
-    <td><tt>2.1.1</tt></td>
+    <td><tt>2.1.3</tt></td>
   </tr>
   <tr>
     <td><tt>['play2']['checksum']</tt></td>
     <td>String</td>
     <td>Zip checksum</td>
-    <td><tt>1ec0b736f9836f760b3c135154fd9a4b</tt></td>
+    <td><tt>15a7fca3e955422017acc299827da72b</tt></td>
   </tr>
   <tr>
     <td><tt>['play2']['url']</tt></td>
