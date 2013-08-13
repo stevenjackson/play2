@@ -58,9 +58,11 @@ unless File.directory? destinationPath
       FileUtils.chmod "+x", "#{destinationPath}/framework/cleanEverything"
       FileUtils.chmod "+x", "#{destinationPath}/framework/package"
       FileUtils.chmod "+x", "#{destinationPath}/framework/runtests"
-      
+
       #Link
       FileUtils.ln_sf "#{destinationPath}/play", "/usr/bin/play"
+
+      FileUtils.chown_R "vagrant", "vagrant", "#{destinationPath}"
 
       #Clean
       FileUtils.rm archiveFile
