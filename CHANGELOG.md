@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of play2.
 
+## 0.2.1
+
+* Fix breaking change from latest rubyzip gem
+
 ## 0.2.0
 
 * Forked from https://github.com/njin-fr/play2
