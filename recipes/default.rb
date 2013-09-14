@@ -19,7 +19,7 @@
 
 chef_gem "rubyzip" do
 end
-require 'zip/zip'
+require 'zip'
 
 play2Home 		= node.play2.home
 destinationName = "play-#{node.play2.version}"
@@ -41,7 +41,7 @@ unless File.directory? destinationPath
   ruby_block "install" do
     block do
       #Unzip
-      Zip::ZipFile.open(archiveFile) { |zip_file|
+      Zip::File.open(archiveFile) { |zip_file|
         zip_file.each { |f|
           unless f.directory?
             f_path=::File.join(play2Home, f.name)
