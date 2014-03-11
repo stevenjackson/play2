@@ -62,7 +62,7 @@ unless File.directory? destinationPath
       #Link
       FileUtils.ln_sf "#{destinationPath}/play", "/usr/bin/play"
 
-      FileUtils.chown_R "vagrant", "vagrant", "#{destinationPath}"
+      FileUtils.chown_R "#{node.play2.user}", "#{node.play2.user}", "#{destinationPath}"
 
       #Clean
       FileUtils.rm archiveFile
